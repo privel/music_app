@@ -1,0 +1,5 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "cmake.sourceDirectory": "/home/vspxd/code/player_music_project/windows",
+    "java.compile.nullAnalysis.mode": "automatic"
+}

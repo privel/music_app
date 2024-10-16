@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "632713114625",
+    "project_id": "yandex-musics",
+    "storage_bucket": "yandex-musics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632713114625:android:9ab1860b413da3e8f6bc00",
+        "android_client_info": {
+          "package_name": "com.example.player_music_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX2mDG2uZc-2s8Y9cRqhGxEJUhdXaxFhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

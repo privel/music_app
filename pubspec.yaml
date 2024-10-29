@@ -45,6 +45,9 @@ dev_dependencies:
   firebase_auth: 
   crystal_navigation_bar: 
   google_nav_bar: 
+  rive_animated_icon: ^2.0.1
+  rive:
+  
   
   iconly: 
   draggable_home:
@@ -68,10 +71,10 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+ 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

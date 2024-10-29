@@ -81,6 +81,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.1"
+  ffi:
+    dependency: transitive
+    description:
+      name: ffi
+      sha256: "16ed7b077ef01ad6170a3d0c57caa4a112a38d7a2ed5602e0aca9ca6f3d98da6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.3"
   firebase_auth:
     dependency: "direct dev"
     description:
@@ -184,6 +192,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.6"
+  graphs:
+    dependency: transitive
+    description:
+      name: graphs
+      sha256: "741bbf84165310a68ff28fe9e727332eef1407342fca52759cb21ad8177bb8d0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.2"
   http:
     dependency: transitive
     description:
@@ -280,6 +296,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  rive:
+    dependency: "direct dev"
+    description:
+      name: rive
+      sha256: cd45b071b288e4bef05f25423e1001a9b3218b81745deae18c9b4d2a2952cc56
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.14"
+  rive_animated_icon:
+    dependency: "direct dev"
+    description:
+      name: rive_animated_icon
+      sha256: "82ccf3d296b6c661b230c7ff3ac0948f71ea38c59cd2fd565b1ef40b0416622e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
+  rive_common:
+    dependency: transitive
+    description:
+      name: rive_common
+      sha256: c7bf0781b1621629361579c300ac2f8aa1a238227a242202a596e82becc244d7
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.11"
   rxdart:
     dependency: transitive
     description:

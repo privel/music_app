@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:crystal_navigation_bar/crystal_navigation_bar.dart'; // Bottom Navigation Bar
 import 'package:iconly/iconly.dart'; // Icons
+import 'package:rive_animated_icon/rive_animated_icon.dart'; // Rive Icon Animation
 
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -41,6 +42,7 @@ class BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
         tabs: [
           GButton(
             icon: IconlyLight.home,
+            
             text: 'Home',
           ),
           GButton(

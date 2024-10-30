@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:player_music_project/service/authservice.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -11,7 +12,15 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("122132131"),
+      appBar: AppBar(
+        title: Text("12213"),
+      ),
+      body: ElevatedButton(
+        onPressed: () async {
+          AuthService().signout(context: context);
+        },
+        child: const Text("EXIT"),
+      ),
     );
   }
 }

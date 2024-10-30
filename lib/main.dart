@@ -2,14 +2,20 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:player_music_project/components/BottomNavigationBar.dart';
+import 'package:player_music_project/components/ColorPallet.dart';
 import 'screens/HomeScreen.dart';
 
-//plugin flutter
+// ignore: depend_on_referenced_packages
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart'; 
 
-import 'package:crystal_navigation_bar/crystal_navigation_bar.dart'; //Bottom Navigation Bar
-import 'package:iconly/iconly.dart'; // Other Icons
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
   runApp(const MyApp());
 }
 
@@ -19,10 +25,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Dolbit Normalbno',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: ColorPallets().backGroundColor),  // old colors Colors.deepPirple
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Music'),
@@ -43,11 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedTab = 0;
 
   final List<Widget> _tabs = <Widget>[
-    HomeScreen(),
-    Center(child: Text('Tab 2')),
-    Center(child: Text('Tab 3')),
-    Center(child: Text('Tab 3')),
-    Center(child: Text('Tab 3')),
+    const HomeScreen(),
+    const Center(child: Text('Tab 2')),
+    const Center(child: Text('Tab 3')),
   ];
 
   void _handleIndexChanged(int index) {
@@ -60,8 +64,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true, //for Bottom navigation bar
-
-      
 
       body: _tabs[_selectedTab],
 

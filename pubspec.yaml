@@ -2,7 +2,7 @@ name: player_music_project
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'Spidiks' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -47,8 +47,8 @@ dev_dependencies:
   google_nav_bar: 
   rive_animated_icon: ^2.0.1
   rive:
-  
-  
+  google_fonts: ^6.2.1
+  fluttertoast: ^8.2.8  
   iconly: 
   draggable_home:
 
@@ -75,6 +75,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/rive_animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -1,16 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:player_music_project/screens/Auth/AccountScreen.dart';
+import 'package:player_music_project/screens/AccountScreen/AccountScreen.dart';
+import 'package:player_music_project/screens/Auth/login.dart';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:player_music_project/screens/HomeScreen.dart';
+import 'package:player_music_project/service/authservice.dart';
+
+import 'package:google_fonts/google_fonts.dart';
+import 'package:iconly/iconly.dart';
 
 class Appbarcomponent extends StatelessWidget implements PreferredSizeWidget {
   const Appbarcomponent({super.key});
 
   void _personButton(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => AccountScreen(),
-      ),
-    );
+    
+    FirebaseAuth.instance
+    .authStateChanges()
+    .listen((User? user) {
+      if (user == null) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Login(),
+          ),
+        );
+      } else {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => AccountScreen(),
+          ),
+        );
+      }
+    });
+    
   }
 
   @override
@@ -19,11 +42,15 @@ class Appbarcomponent extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           onPressed: () => _personButton(context),
-          icon: const Icon(Icons.person),
-        )
+          icon: const Icon(IconlyLight.profile),
+        ),
       ],
       centerTitle: true,
-      title: Image.asset("assets/images/cat.png"),
+      //title: Image.asset("assets/images/cat.png"),
+      title: Text("Sample", style:  GoogleFonts.akronim(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+      ),),
     );
   }
 

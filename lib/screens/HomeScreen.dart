@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-
-//Flutter plugins
-import 'package:draggable_home/draggable_home.dart'; // for AppBar
 import 'package:player_music_project/components/AppBarComponent.dart';
-
-import 'package:rive_animated_icon/rive_animated_icon.dart';
+import 'package:rive/rive.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,18 +16,52 @@ class _HomeScreen extends State<HomeScreen> {
       appBar: const Appbarcomponent(),
       body: ListView(
         children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.00009,
-              ),
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height * 0.80,
+          Padding(
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.12,
+            ),
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height * 0.80,
+              child: Expanded(
                 child: Column(
                   children: [
                     Stack(
                       children: [
-                        Text("123"),
+                        // RiveAnimation.asset(
+                        //   useArtboardSize: true,
+                        //   "assets/rive_animation/water_effect_esample.riv",
+                        // ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.25,
+                          child: TextButton(
+                            onPressed: () {},
+                            child: const Row(
+                              children: [
+                                Icon(Icons.play_arrow),
+                                Text(
+                                  "My Vibe",
+                                  style: TextStyle(),
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.1,
+                    ),
+
+                    const Row(
+                      children: [
+                        Column(
+                          children: [
+                            Card(),
+                          ],
+                        ),
+                        Column(
+                          children: [],
+                        ),
                       ],
                     ),
                   ],

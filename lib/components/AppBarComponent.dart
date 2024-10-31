@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:player_music_project/components/ColorPallet.dart';
 import 'package:player_music_project/screens/AccountScreen/AccountScreen.dart';
 import 'package:player_music_project/screens/Auth/login.dart';
 
@@ -41,6 +42,7 @@ class Appbarcomponent extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       actions: [
         IconButton(
+          color: ColorPallets().mainBlackColor,
           onPressed: () => _personButton(context),
           icon: const Icon(IconlyLight.profile),
         ),

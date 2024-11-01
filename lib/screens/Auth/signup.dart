@@ -5,9 +5,9 @@ import 'package:player_music_project/components/ColorPallet.dart';
 import 'package:player_music_project/screens/Auth/login.dart';
 import 'package:player_music_project/service/authservice.dart';
 
-// ignore: depend_on_referenced_packages
+
 import 'package:rive_animated_icon/rive_animated_icon.dart';
-// ignore: depend_on_referenced_packages
+
 import 'package:google_fonts/google_fonts.dart';
 
 class Signup extends StatelessWidget {

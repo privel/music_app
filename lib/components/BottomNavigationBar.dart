@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+// ignore: depend_on_referenced_packages
 import 'package:crystal_navigation_bar/crystal_navigation_bar.dart'; // Bottom Navigation Bar
+// ignore: depend_on_referenced_packages
 import 'package:iconly/iconly.dart'; // Icons
 import 'package:player_music_project/components/ColorPallet.dart';
-import 'package:rive_animated_icon/rive_animated_icon.dart'; // Rive Icon Animation
 
+// ignore: depend_on_referenced_packages
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class BottomNavigationBarWidget extends StatefulWidget {
@@ -12,10 +14,10 @@ class BottomNavigationBarWidget extends StatefulWidget {
   final ValueChanged<int> onTap;
 
   const BottomNavigationBarWidget({
-    Key? key,
+    super.key,
     required this.currentIndex,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   State<BottomNavigationBarWidget> createState() =>
@@ -29,9 +31,6 @@ class BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
         rippleColor: Colors.grey[300]!,
         hoverColor: Colors.grey[100]!,
         gap: 1,
-        
-      
-
         padding: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * 0.09,
           vertical: MediaQuery.of(context).size.height * 0.026,
@@ -41,10 +40,9 @@ class BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
         onTabChange: widget.onTap,
         selectedIndex: widget.currentIndex,
         backgroundColor: Colors.white,
-        tabs: [
+        tabs: const [
           GButton(
             icon: IconlyLight.home,
-            
             text: 'Home',
           ),
           GButton(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:player_music_project/components/AppBarComponent.dart';
-import 'package:rive/rive.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
